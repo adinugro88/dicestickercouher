@@ -11,7 +11,7 @@ class Master extends Component
 {
 
     use WithPagination;
-    public $kodeawal,$kodeakhir, $kode,$status,$nilai,$tokoid,$voucherid,$tokolist,$jmlvoucher,$i,$dataakhir,$checkdel =[] ;
+    public $kodeawal,$kodeakhir,$fee_voucher, $kode,$status,$nilai,$tokoid,$voucherid,$tokolist,$jmlvoucher,$i,$dataakhir,$checkdel =[] ;
     public $search,$search2;
     public $pilihan= 0, $bykode, $nilaiv, $tokoidm,$lstoko;
 
@@ -46,7 +46,7 @@ class Master extends Component
                 'kode'          =>  $i,
                 'status'        => 'active',
                 'nilai_value'   => $this->nilai,
-                'fee_voucer'   => 250000,
+                'fee_voucer'   => $this->fee_voucher,
                 'toko_id'       => $this->tokoid,
             ];
             Voucher::create($simpandata);
