@@ -31,6 +31,12 @@ $links = [
         "is_multi" => false
     ],
     [
+        "href" => route('customers'),
+        "text" => "Csutomer",
+        "icon" => "fa fa-Users",
+        "is_multi" => false
+    ],
+    [
         "href" => route('report'),
         "text" => "Report Voucher",
         "icon" => "fas fa-user",
