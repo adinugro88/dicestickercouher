@@ -85,6 +85,12 @@
                                 <input type="text" wire:model="nilai" class="form-control">
                                 @error('nilai') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
+
+                            <div class="mb-3">
+                                <label>Fee Voucher</label>
+                                <input type="text" wire:model="fee_voucher" class="form-control">
+                                @error('fee_voucher') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
                             <div class="mb-3">
                                 <label>Toko</label>
                                 <select class="form-control select2" wire:model="tokoid" style="width: 100%;">
