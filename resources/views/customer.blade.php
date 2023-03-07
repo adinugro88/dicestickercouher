@@ -111,6 +111,7 @@
                             <table class="table m-0">
                                 <thead>
                                     <tr>
+                                        <th>Tanggal</th>
                                         <th>No_invoice</th>
                                         <th>Voucher </th>
                                         <th>Toko</th>
@@ -120,6 +121,7 @@
                                 <tbody>
                                     @forelse ($listcust as $custs)
                                     <tr>
+                                        <td>{{ \Carbon\Carbon::parse($custs->created_at)->format('j F, Y') }} </td>
                                         <td>{{ $custs->No_Invoice }}</td>
                                         <td>{{ 'DS -'.str_pad($custs->voucher->kode,4,'0',STR_PAD_LEFT)}}</td>
                                         <td>{{ $custs->toko->nama  }}</td>

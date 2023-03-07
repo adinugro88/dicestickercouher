@@ -79,6 +79,7 @@ class Master extends Component
                 'kode'          => $this->bykode,
                 'status'        => 'active',
                 'nilai_value'   => $this->nilaiv,
+                
                 'toko_id'       => $this->tokoidm,
             ]);
     
@@ -115,7 +116,7 @@ class Master extends Component
                 'kode'          =>  $i,
                 'status'        => 'active',
                 'nilai_value'   => $this->nilai,
-                'fee_voucer'   => 250000,
+                'fee_voucer'   => $this->fee_voucher,
                 'toko_id'       => $this->tokoid,
             ];
             Voucher::create($simpandata);

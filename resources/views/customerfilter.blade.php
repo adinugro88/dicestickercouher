@@ -78,10 +78,12 @@
                             <table class="table m-0">
                                 <thead>
                                     <tr>
+                                        <th>tanggal</th>
                                         <th>No_invoice</th>
                                         <th>Voucher </th>
                                         <th>Fee</th>
                                         <th>Cabang Claim</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,6 +92,7 @@
                                   @endphp
                                     @forelse ($listcust as $custs)
                                     <tr>
+                                        <td>{{ $custs->created_at }}</td>
                                         <td>{{ $custs->No_Invoice }}</td>
                                         <td>{{ 'DS -'.str_pad($custs->voucher->kode,4,'0',STR_PAD_LEFT)}}</td>
                                         <td>Rp {{number_format( $custs->voucher->fee_voucer, 0, ',', '.') }}</td>

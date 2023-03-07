@@ -45,7 +45,7 @@
                                     <tbody>
                                         @forelse ($listcust as $custs)
                                         <tr>
-                                            <td>{{ $custs->noinvoice }} </td>
+                                            <td>{{ $custs->No_Invoice }} </td>
                                             <td>{{  'DS -'.str_pad($custs->voucher->kode,5,'0',STR_PAD_LEFT)}}</td>
                                             <td>{{ $custs->toko->nama  }}</td>
                                             <td>{{ $custs->Cabang->nama  }}</td>
