@@ -74,7 +74,7 @@ class Index extends Component
         $validatedData = $this->validate();
 
         Customers::where('id',$this->cust_id)->update([
-            'No_Invoice '     => $validatedData['noinvoice'],
+            'No_Invoice'   => $validatedData['noinvoice'],
             'voucher_id'    => $validatedData['voucherpil'],
             'cabangs_id'    => $validatedData['cabangpil'],
             'toko_id'       => $validatedData['tokopil'],
