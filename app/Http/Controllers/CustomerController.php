@@ -27,6 +27,12 @@ class CustomerController extends Controller
         return view('customer',compact('listcust','toko'));
     }
 
+    public function customercrud()
+    {
+        return view('customercrud');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

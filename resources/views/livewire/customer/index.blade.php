@@ -34,11 +34,7 @@
                                 <table class="table m-0">
                                     <thead>
                                         <tr>
-                                           
-                                            <th>nama</th>
-                                            <th>Alamat </th>
-                                            <th>telepon</th>
-                                            <th>Produk</th>
+                                            <th>No Invoice</th>
                                             <th>Harga</th>
                                             <th>Voucher </th>
                                             <th>Toko</th>
@@ -49,10 +45,7 @@
                                     <tbody>
                                         @forelse ($listcust as $custs)
                                         <tr>
-                                            <td>{{ $custs->nama }}</td>
-                                            <td>{{ $custs->alamat }}</td>
-                                            <td>{{ $custs->telpon }}</td>
-                                            <td>{{ $custs->produk }} </td>
+                                            <td>{{ $custs->noinvoice }} </td>
                                             <td> Rp {{ number_format( $custs->harga, 0, ',', '.') }}</td>
                                             <td>{{  'DS -'.str_pad($custs->voucher->kode,5,'0',STR_PAD_LEFT)}}</td>
                                             <td>{{ $custs->toko->nama  }}</td>

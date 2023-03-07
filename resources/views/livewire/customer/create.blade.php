@@ -12,33 +12,11 @@
                     <form x-on:company-added.window="open = false" wire:submit.prevent="simpan">
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="mb-3">
-                                        <label>Nama</label>
-                                        <input type="text" wire:model="nama" class="form-control">
-                                        @error('nama') <span class="text-danger">{{ $message }}</span> @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label>Alamat</label>
-                                        <input type="text" wire:model="alamat" class="form-control">
-                                        @error('alamat') <span class="text-danger">{{ $message }}</span> @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label>Telepon</label>
-                                        <input type="text" wire:model="telpon" class="form-control">
-                                        @error('telpon') <span class="text-danger">{{ $message }}</span> @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label>Produk</label>
-                                        <input type="text" wire:model="produk" class="form-control">
-                                        @error('produk') <span class="text-danger">{{ $message }}</span> @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label>Harga</label>
-                                        <input type="text" wire:model="harga" class="form-control">
-                                        @error('harga') <span class="text-danger">{{ $message }}</span> @enderror
+                                        <label>No invoice</label>
+                                        <input type="text" wire:model="noinvoice" class="form-control">
+                                        @error('noinvoice') <span class="text-danger">{{ $message }}</span> @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label>Toko </label>

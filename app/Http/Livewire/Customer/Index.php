@@ -36,7 +36,7 @@ class Index extends Component
         $validatedData = $this->validate();
         $customer = Customers::create([
             
-            'noinvoice'     => $this->noinvoice,
+            'No_Invoice'     => $this->noinvoice,
             'voucher_id'    => $this->voucherpil,
             'cabangs_id'    => $this->cabangpil,
             'toko_id'       => $this->tokopil,
@@ -60,11 +60,7 @@ class Index extends Component
         $cust = Customers::find($cust_id);
         if($cust){
             $this->cust_id      = $cust->id;
-            $this->nama         = $cust->nama;
-            $this->alamat       = $cust->alamat;
-            $this->telpon       = $cust->telpon;
-            $this->produk       = $cust->produk;
-            $this->harga        = $cust->harga;
+            $this->noinvoice    = $cust->No_Invoice ;
             $this->voucherpil   = $cust->voucher_id;
             $this->cabangpil    = $cust->cabangs_id;
             $this->tokopil      = $cust->toko_id;
@@ -78,7 +74,7 @@ class Index extends Component
         $validatedData = $this->validate();
 
         Customers::where('id',$this->cust_id)->update([
-            'noinvoice'         => $validatedData['noinvoice'],
+            'No_Invoice '     => $validatedData['noinvoice'],
             'voucher_id'    => $validatedData['voucherpil'],
             'cabangs_id'    => $validatedData['cabangpil'],
             'toko_id'       => $validatedData['tokopil'],
@@ -109,11 +105,7 @@ class Index extends Component
 
     public function resetInput()
     {
-        $this->nama         = '';
-        $this->alamat       = '';
-        $this->telpon       = '';
-        $this->produk       = '';
-        $this->harga        = '';
+        $this->noinvoice        = '';
         $this->voucherpil      = '';
         $this->cabangpil     = '';
         $this->tokopil         = '';
@@ -133,7 +125,7 @@ class Index extends Component
         $this->toko=  Toko::get();
         $this->cabang=  Cabang::get();
         $this->lstvoucher = Voucher::where ('toko_id',$this->tokopil)->where('status','active')->orderBy('kode','ASC')->get();
-        $listcust = Customers::where('nama', 'like', '%'.$this->search.'%')->orderBy('id','ASC')->paginate(10);
+        $listcust = Customers::orderBy('id','ASC')->paginate(10);
         return view('livewire.customer.index',['listcust' => $listcust]);
     }
 }

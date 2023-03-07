@@ -34,6 +34,7 @@ Route::group(['prefix' => 'dashboard/admin'], function () {
     Route::get('/report',[CustomerController::class, 'index'])->name('report');
     Route::get('/report/date/',[CustomerController::class, 'show'])->name('reportbydate');
     Route::get('/customer',[CustomerController::class, 'customer'])->name('customer');
+    Route::get('/customercrud',[CustomerController::class, 'customercrud'])->name('customercrud');
   
 
     Route::group(['prefix' => 'profile'], function () {
