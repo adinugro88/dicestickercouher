@@ -204,7 +204,7 @@
 
 
 
-            {{-- <div class="col-12">
+            <div class="col-12">
 
 
                 <div class="card">
@@ -259,7 +259,7 @@
 
                 </div>
 
-            </div> --}}
+            </div>
 
             <!-- /.col -->
         </div>
