@@ -32,15 +32,15 @@ $links = [
     ],
     [
         "href" => route('customercrud'),
-        "text" => "Csutomer",
-        "icon" => "fa fa-Users",
+        "text" => "Customer",
+        "icon" => "fas fa-user",
         "is_multi" => false
     ],
 
     [
         "href" => route('report'),
         "text" => "Report Voucher",
-        "icon" => "fas fa-user",
+        "icon" => "fas fa-file",
         "is_multi" => false
     ],
     [
